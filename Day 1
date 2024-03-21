@@ -1,0 +1,14 @@
+// Hackerank Code - printing Hello, World!
+print("Hello, World!")
+
+// leetcode code- Complementing a number
+def find_complement(n):
+    binary = bin(n)[2:]
+    inverted_binary = ''.join(['1' if bit == '0' else '0' for bit in binary])
+    complement = int(inverted_binary, 2)
+    return complement
+
+num = int(input("Enter a number: "))
+complement = find_complement(num)
+print("Input: ", num)
+print("Complemented Number: ", complement)
