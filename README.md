@@ -1,2 +1,2 @@
 # 100-Days-Coding-Challenge
-Solving a code daily and uploading it
+Solving one coding challange daily from hackerank and leetcode for 100 days 
