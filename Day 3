@@ -1,0 +1,40 @@
+# Hackerank's code - Printing addition, subtraction and multiplication of two numbers
+
+a = int(input())
+b = int(input())
+print(a+b)
+print(a-b)
+print(a*b)
+
+
+
+# Leetcode's code - Converting integer to roman
+
+def int_to_roman(num):
+    temp = num
+    roman_mapping = {
+        1000: 'M',
+        900: 'CM',
+        500: 'D',
+        400: 'CD',
+        100: 'C',
+        90: 'XC',
+        50: 'L',
+        40: 'XL',
+        10: 'X',
+        9: 'IX',
+        5: 'V',
+        4: 'IV',
+        1: 'I'
+    }
+
+    roman_num = ""
+    for value, symbol in roman_mapping.items():
+        while temp >= value:
+            roman_num += symbol
+            temp -= value
+
+    return roman_num
+
+int_num = int(input("Enter a number: "))
+print("The roman conversion of {} is {}".format(int_num, int_to_roman(int_num)))
