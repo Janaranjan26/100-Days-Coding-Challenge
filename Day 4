@@ -1,0 +1,16 @@
+# Hackerank's code - Division and Floor Division
+
+a = int(input())
+b = int(input())
+print("Normal division result: ", a/b)
+print("Floor division result: ", a//b)
+
+# Leetcode's code - Find the fist repeating number in a list
+
+nums = eval(input("Enter the numbered list: "))
+seen = set()
+for num in nums:
+    if num in seen:
+        print(num)
+        break
+    seen.add(num)
