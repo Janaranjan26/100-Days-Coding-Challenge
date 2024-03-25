@@ -1,0 +1,19 @@
+# Hackerank's code - Printing the list of all non-negative numbers less than the given integer.
+
+n = int(input())
+numbers = []
+for num in range(0, n):
+    numbers.append(num*num)
+for number in numbers:
+    print(number)
+
+# Leetcode's code - Printing the list of repeating numbers in a list
+
+nums = eval(input("Enter the numbered list: "))
+seen = set()
+duplicate_list = []
+for num in nums:
+    if num in seen:
+        duplicate_list.append(num)
+    seen.add(num)
+print("List of repeating numbers present in the list: ", duplicate_list)
