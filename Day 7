@@ -3,3 +3,19 @@
 n = int(input("Enter a number"))
 print(*range(1, n+1), sep='')
 
+# Leetcode's code - Minimum Remove to Make Valid Parentheses
+
+s = input("Enter the characters: ")
+stack_open = []
+stack_remove = []
+for i, char in enumerate(s):
+    if char == '(':
+        stack_open.append(i)  
+    elif char == ')' and stack_open:
+        stack_open.pop()  
+    elif char == ')':
+        stack_remove.append(i)  
+        
+final_string = ''.join(char for i, char in enumerate(s) if i not in stack_remove)
+
+print(final_string)
