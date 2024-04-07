@@ -1,0 +1,36 @@
+# Leetcode's code - Color extraction from CSS code
+
+import re
+
+def read_css_lines():
+    """Reads CSS lines from input until an empty line is encountered."""
+    css_lines = []
+    while True:
+        try:
+            line = input().strip()
+            if not line:
+                break
+            css_lines.append(line)
+        except EOFError:
+            break
+    return css_lines
+
+def extract_color_codes(css_lines):
+    """Extracts hex color codes from CSS lines."""
+    hex_color_pattern = r'#[0-9a-fA-F]{3,6}'
+    color_codes = []
+    for line in css_lines:
+        color_codes.extend(re.findall(hex_color_pattern, line))
+    return color_codes
+
+def main():
+    print("Enter CSS lines:")
+    css_lines = read_css_lines()
+    print("CSS Lines:", css_lines)
+
+    color_codes = extract_color_codes(css_lines)
+    print("Color Codes:", color_codes)
+
+if __name__ == "__main__":
+    main()
+
