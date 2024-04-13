@@ -1,0 +1,11 @@
+# Hackerank's code - Find the runnerup score
+
+n = int(input())
+arr = map(int, input().split())
+arr_list = list(arr)
+arr_list.sort(reverse = True)
+i = 0
+while arr_list[i] == arr_list[i+1]:
+    i += 1
+print(arr_list[i+1])
+
